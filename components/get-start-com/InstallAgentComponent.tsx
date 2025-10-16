@@ -5,17 +5,17 @@ import Link from "next/link";
 
 export default function InstallRestLabApp() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 font-sans text-gray-700">
+    <div className="max-w-4xl mx-auto px-6 py-12 font-sans text-gray-800 dark:text-gray-300">
       {/* Header */}
-      <h1 className="text-3xl font-extrabold mb-4 text-gray-900">
+      <h1 className="text-3xl font-extrabold mb-4 text-gray-900 dark:text-yellow-300">
         Get the RestLab app
       </h1>
 
       {/* Download link box */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+      <div className="bg-blue-50 dark:bg-blue-100 border border-blue-200 dark:border-blue-700 rounded-lg p-4 mb-6">
         <Link
           href="/download"
-          className="text-blue-600 font-semibold hover:underline"
+          className="text-blue-900 dark:text-blue-700 font-semibold hover:underline"
         >
           Download the RestLab app for macOS, Windows, or Linux.
         </Link>

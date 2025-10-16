@@ -7,7 +7,7 @@ export default function FirstStepsRestLab() {
     <div className="max-w-5xl mx-auto px-6 py-12 text-gray-700 dark:text-gray-300 ">
       {/* Header */}
       <div className=" mb-12">
-        <h1 className="text-3xl font-extrabold mb-4 text-gray-900 dark:text-secondary">
+        <h1 className="text-3xl font-extrabold mb-4 text-gray-900 dark:text-yellow-300">
           Your first steps with RestLab
         </h1>
         <p className=" text-gray-900 text-justify leading-relaxed dark:text-gray-300">
