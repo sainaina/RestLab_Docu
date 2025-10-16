@@ -5,7 +5,7 @@ const config: DocsThemeConfig = {
   useNextSeoProps() {
     return {
       titleTemplate: "RestLab | Documentation",
-      description: "Official documentation for RestLab — explore features, setup guides, and API references.",
+      description: "Official documentation for RestLab ",
     };
   },
   head: (
