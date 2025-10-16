@@ -2,12 +2,16 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
+  useNextSeoProps() {
+    return {
+      titleTemplate: "RestLab | Documentation",
+      description: "Official documentation for RestLab — explore features, setup guides, and API references.",
+    };
+  },
   head: (
     <>
-      <title>RestLab | Documents</title>
       <link rel="icon" href="/favicon.ico" />
       <meta name="theme-color" content="#081910" />
-      <meta name="description" content="Official documentation for RestLab — explore features, setup guides, and API references." />
     </>
   ),
   logo: (
