@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* === BODY SETTINGS === */
+body {
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === SIDEBAR CONTAINER === */
+.nextra-sidebar-container {
+  width: 400px !important; /* bigger sidebar */
+  background-color: var(--sidebar-bg, #ffffff) !important;
+  border-right: 1.5px solid var(--sidebar-border, #e5e7eb);
+  padding-top: 1.5rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, width 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .nextra-sidebar-container {
+    width: 360px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nextra-sidebar-container {
+    width: 100% !important;
+    border-right: none;
+  }
+}
+
+/* === SIDEBAR LINKS === */
+.nextra-sidebar ul li a {
+  display: block;
+  font-size: 18px; /* bigger text */
+  color: var(--sidebar-link, #1e293b);
+  padding: 12px 24px; /* more padding */
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nextra-sidebar ul li a:hover {
+  background-color: var(--sidebar-link-hover-bg, #e0f2fe);
+  color: var(--sidebar-link-hover, #0369a1);
+  transform: translateX(4px);
+}
+
+/* === ACTIVE LINK === */
+.nextra-sidebar ul li a.active,
+.nextra-sidebar ul li a[aria-current="page"] {
+  background-color: var(--sidebar-link-active-bg, #dbeafe);
+  color: var(--sidebar-link-active, #1d4ed8);
+  font-weight: 600;
+}
+
+/* === SECTION TITLES IN SIDEBAR === */
+.nextra-sidebar .nextra-sidebar-item-title {
+  font-size: 18px; /* bigger title text */
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sidebar-title, #475569);
+  margin: 20px 0 8px 20px;
+  letter-spacing: 0.5px;
+}
+
+/* === COLLAPSE ICONS === */
+.nextra-sidebar details summary {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--sidebar-summary, #0f172a);
+}
+
+.nextra-sidebar details summary:hover {
+  color: var(--sidebar-summary-hover, #1d4ed8);
+}
+
+/* === SCROLLBAR === */
+.nextra-sidebar-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.nextra-sidebar-container::-webkit-scrollbar-thumb {
+  background: var(--sidebar-scrollbar, #cbd5e1);
+  border-radius: 4px;
+}
+
+/* === DARK MODE VARIABLES === */
+.dark .nextra-sidebar-container {
+  --sidebar-bg: #081910;
+  --sidebar-border: #0f2920;
+
+  --sidebar-link: #ffffff; /* text white in dark mode */
+  --sidebar-link-hover-bg: #0f2920;
+  --sidebar-link-hover: #4ade80;
+
+  --sidebar-link-active-bg: #0f2920;
+  --sidebar-link-active: #22c55e;
+
+  --sidebar-title: #94a3b8;
+  --sidebar-summary: #e0f2fe;
+  --sidebar-summary-hover: #4ade80;
+
+  --sidebar-scrollbar: #4b5563;
+}
+
+/* === MAIN CONTENT TITLE === */
+.nextra-main h1,
+.nextra-main h2 {
+  font-size: 2.5rem; /* bigger main content title */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--main-title, #0f172a);
+  transition: color 0.3s ease;
+}
+
+.dark .nextra-main h1,
+.dark .nextra-main h2 {
+  color: #ffffff; /* white text in dark mode */
+}
+
+/* === ROOT VARIABLES === */
+:root {
+  --color-primary: #004030;
+  --color-secondary: #ffc107;
+  --font-geist-sans: "Geist", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-inter: "Inter", sans-serif;
+
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --border: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+}
+
+html {
+  font-family: var(--font-inter), sans-serif;
+}
